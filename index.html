@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/minesSweeper.css">
+    <title>mineSweeper</title>
+</head>
+
+<body onload="init()" oncontextmenu="return false;">
+    <h3 class="title">Mines Sweeper</h3>
+    <h1 class="title timer"></h1>
+    <h3 class="title">Best Score: <span></span></h3>
+    <div class="button-container">
+        <button class="button safeClick" onclick="safeClickButton()">Safe Click</button>
+        <button class="button createMines" onclick=" menuallyCreateMinesButton()"></button>
+        <button class="button undo" onclick=" undoButton()">UNDO</button>
+    </div>
+    <div>
+        <span class="safeClicks"></span>
+    </div>
+    <div>
+        <button class="button life">💙</button>
+        <button class="button life">💙</button>
+        <button class="button life">💙</button>
+    </div>
+    <div>
+        <button class="button hint" onclick="hintButton(this)">Hint</button>
+        <button class="button hint" onclick="hintButton(this)">Hint</button>
+        <button class="button hint" onclick="hintButton(this)">Hint</button>
+    </div>
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+    <div class="modal">
+        <div>
+            <button class="button level" onclick="levels(this)">Easy</button>
+            <button class="button level" onclick="levels(this)">Medium</button>
+            <button class="button level" onclick="levels(this)">Hard</button>
+        </div>
+        <button class="button gameMood" onclick="playAgain()">😀</button>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
